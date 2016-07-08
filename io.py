@@ -8,7 +8,8 @@ def benchmark(func):
         func(*args, **kwargs)
 
         end = time()
-        print("Run took {:0.3f}".format(end - start))
+        duration = (end - start) * 1000
+        print("Run took {}ms".format(int(duration)))
 
     return bench
 
